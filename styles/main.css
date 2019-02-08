@@ -1,0 +1,1015 @@
+/* CSS reset in a separate file */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #BETTER BOX MODEL
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #HELPER
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.box-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.box-center {
+  align-self: center;
+}
+
+/* ************ #Grid Boxes ************ */
+.box-full {
+  width: 100%;
+}
+
+.box-lrg {
+  width: 100%;
+}
+@media screen and (min-width: 40em) {
+  .box-lrg {
+    width: 58.5%;
+  }
+}
+
+.box-sml {
+  width: 100%;
+}
+@media screen and (min-width: 40em) {
+  .box-sml {
+    width: 38.5%;
+  }
+}
+
+.proj-sidebar .box-half {
+  width: 100%;
+}
+@media screen and (min-width: 69em) {
+  .proj-sidebar .box-half {
+    width: 48.5%;
+  }
+}
+
+.box-half {
+  width: 100%;
+}
+@media screen and (min-width: 40em) {
+  .box-half {
+    width: 48.5%;
+  }
+}
+
+.box-third {
+  width: 100%;
+}
+@media screen and (min-width: 69em) {
+  .box-third {
+    width: 31.33333%;
+  }
+}
+
+/* ************ #Margins ************ */
+/* Standard margin */
+.box-full, .box-lrg, .box-sml, .box-half, .box-third {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 40em) {
+  .box-full, .box-lrg, .box-sml, .box-half, .box-third {
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .marg-r {
+    margin-right: 1.5%;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .marg-l {
+    margin-left: 1.5%;
+  }
+}
+
+.box-half.marg-r {
+  margin-right: 0;
+}
+@media screen and (min-width: 69em) {
+  .box-half.marg-r {
+    margin-right: 1.5%;
+  }
+}
+
+.box-half.marg-l {
+  margin-left: 0;
+}
+@media screen and (min-width: 69em) {
+  .box-half.marg-l {
+    margin-left: 1.5%;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #BASIC
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+html {
+  font-size: 16px;
+  background-color: #F1E41D;
+}
+
+img, embed, object, video {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  margin: auto;
+  padding-top: 1rem;
+  color: #484647;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  background-color: #ffffff;
+  border-top: 0.5rem solid #F1E41D;
+}
+@media screen and (min-width: 40em) {
+  body {
+    padding-top: 2rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* sticky footer https://codepen.io/SelenIT/pen/QELpww */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  min-width: 100%;
+  display: table;
+}
+
+.content {
+  display: table-row-group;
+}
+
+.footer {
+  display: table-footer-group;
+}
+
+@media screen and (min-width: 50em) {
+  .page-index, .page-contact {
+    padding-top: 7rem;
+  }
+}
+
+/* container for header and content */
+/* this is used on all pages */
+.c-main {
+  margin: auto;
+  width: 92%;
+}
+@media screen and (min-width: 50em) {
+  .c-main {
+    width: 80%;
+  }
+}
+
+ul {
+  list-style-type: circle;
+  margin-left: 1.3rem;
+}
+
+li {
+  line-height: 1.5;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #TYPE STYLES
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+p {
+  line-height: 1.7;
+  padding-bottom: 1.6rem;
+}
+@media screen and (min-width: 40em) {
+  p {
+    font-size: 1.125rem;
+  }
+}
+
+.p-small {
+  font-size: .9rem;
+}
+
+h2 {
+  color: #F6A138;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1;
+  padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 40em) {
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
+.page-contact h2, .page-about h2 {
+  padding-bottom: 1.75rem;
+}
+@media screen and (min-width: 40em) {
+  .page-contact h2, .page-about h2 {
+    padding-bottom: 2.5rem;
+  }
+}
+
+h3 {
+  color: #E9529D;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+  margin-bottom: .2rem;
+}
+
+h4 {
+  color: #F6A138;
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: .05rem;
+}
+
+footer {
+  color: #787677;
+  font-size: 14px;
+}
+@media screen and (min-width: 40em) {
+  footer {
+    font-size: 16px;
+  }
+}
+footer p {
+  padding-bottom: 0rem;
+}
+
+.project-desc__title {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.project-desc__text {
+  color: #ffffff;
+  font-size: .875rem;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.branding {
+  color: #E9529D;
+  font-family: "filson-pro", "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  text-transform: lowercase;
+}
+
+.branding--nav {
+  letter-spacing: 0;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #LINKS
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+a,
+nav a svg path,
+footer a svg path {
+  transition: 400ms;
+  transition-timing-function: ease-in-out;
+}
+
+a:link {
+  color: #F6A138;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover {
+  color: #E9529D;
+  font-weight: 700;
+}
+
+a:visited {
+  color: #F6A138;
+  font-weight: 700;
+}
+
+a.pink-link:link {
+  color: #E9529D;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a.pink-link:hover {
+  color: #E9529D;
+  font-weight: 700;
+}
+
+a.pink-link:visited {
+  color: #E9529D;
+  font-weight: 700;
+}
+
+nav a:link, nav a:visited, footer a:link, footer a:visited {
+  color: #787677;
+  text-decoration: none;
+}
+nav a:hover, footer a:hover {
+  color: #E9529D;
+}
+nav a svg path:hover, footer a svg path:hover {
+  fill: #E9529D;
+}
+
+a.button:link {
+  color: #E9529D;
+  text-decoration: none;
+}
+
+a.button:hover, a.button:visited:hover {
+  color: #ffffff;
+}
+
+a.button:visited {
+  color: #E9529D;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #COMPONENTS (SHARED)
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* ************ #Logo ************ */
+.logo svg path, .logo svg rect {
+  fill: #F1E41D;
+}
+
+/* ************ #Social icons ************ */
+.social svg path {
+  fill: #787677;
+}
+.social svg {
+  width: 30px;
+  /* larger icons on small screens */
+}
+@media screen and (min-width: 50em) {
+  .social svg {
+    width: 25px;
+  }
+}
+.social li {
+  padding-right: 15px;
+  /* larger tap targets on small screens */
+}
+@media screen and (min-width: 50em) {
+  .social li {
+    padding-right: 10px;
+  }
+}
+
+/* ************ #Navigation links ************ */
+.nav-links ul {
+  margin: 0;
+}
+.nav-links li {
+  display: inline-block;
+  padding-right: 1rem;
+  padding-bottom: 0;
+  color: #787677;
+  font-family: "Montserrat", sans-serif;
+  font-size: .875rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 40em) {
+  .nav-links li {
+    padding-right: 2rem;
+  }
+}
+
+/* ************ #Buttons ************ */
+.button {
+  margin-right: 5px;
+  padding: 6px 10px;
+  font-size: .9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #F1E41D;
+  border-radius: 3px;
+  text-align: center;
+  width: 10em;
+}
+@media screen and (min-width: 69em) {
+  .button {
+    margin-bottom: .7em;
+    display: inline-block;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #MENU(MAIN) #NAVIGATION
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.nav-links {
+  margin-left: 0;
+}
+
+.nav-links__main-menu {
+  width: 92%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 50em) {
+  .nav-links__main-menu {
+    position: fixed;
+    top: .9rem;
+    left: 1.2rem;
+    width: auto;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+  }
+}
+
+svg.logo--menu {
+  height: 1em;
+}
+
+.c-social--nav {
+  display: none;
+  /* hides social links from nav bar small screens */
+}
+@media screen and (min-width: 50em) {
+  .c-social--nav {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.2rem;
+    z-index: 1;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #HEADER
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.c-header, .c-about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 40em) {
+  .c-header, .c-about {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 50em) {
+  .c-header, .c-about {
+    margin-bottom: 4rem;
+  }
+}
+
+.header--right, .header--left {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.header--left img {
+  width: 80%;
+  margin: auto;
+}
+@media screen and (min-width: 40em) and (max-width: 50em) {
+  .header--left img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 50em) {
+  .header--left img {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .header--right {
+    margin-left: 1.5%;
+    width: 58.5%;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .header--left {
+    margin-right: 1.5%;
+    width: 38.5%;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #FOOTER
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+footer ul {
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+footer li {
+  padding-bottom: 0;
+  line-height: 1;
+}
+
+.c-footer {
+  width: 100%;
+  position: relative;
+  z-index: 99;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1.2rem;
+  background-color: #F1E41D;
+}
+@media screen and (min-width: 40em) {
+  .c-footer {
+    padding: 1.5rem;
+  }
+}
+.c-footer > div:nth-child(1) {
+  flex-grow: 2;
+  /* navigation expands to fill space */
+  min-width: 50%;
+  -webkit-flex: 2 0 50%;
+  /* bug with min-width on ipad */
+}
+.c-footer > div:nth-child(2) {
+  min-width: 25%;
+  align-self: flex-end;
+}
+.c-footer > div:nth-child(3) {
+  flex-grow: 2;
+  /* social icons expand to fill space */
+  min-width: 50%;
+  -webkit-flex: 2 0 50%;
+  /* bug with min-width on ipad */
+}
+.c-footer > div:nth-child(4) {
+  min-width: 100%;
+  -webkit-flex: 1 1 100%;
+  align-self: flex-end;
+}
+@media screen and (min-width: 40em) {
+  .c-footer > div:nth-child(4) {
+    min-width: 25%;
+    -webkit-flex: 1 1 25%;
+  }
+}
+.c-footer > div:nth-child(1), .c-footer > div:nth-child(2) {
+  margin-bottom: 2.5rem;
+  /* margin only */
+}
+
+.nav-links--footer {
+  display: none;
+  /* hides second set of menu links on mobile */
+}
+@media screen and (min-width: 40em) {
+  .nav-links--footer {
+    display: inline-block;
+    /* shows footer links larger screens */
+  }
+}
+
+.c-social--footer {
+  align-self: flex-start;
+  order: -1;
+}
+@media screen and (min-width: 40em) {
+  .c-social--footer {
+    order: initial;
+    align-self: flex-end;
+  }
+}
+
+.social__list--footer {
+  line-height: 0;
+}
+
+.social__icon--footer {
+  display: inline-block;
+}
+
+.logo--footer {
+  height: 1rem;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #PAGE #INDEX #CONTENT
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.c-projects {
+  /*  outer container for ALL projects on index page */
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 40em) {
+  .c-projects {
+    margin-bottom: 3rem;
+    /* margin between bottom of content and footer */
+  }
+}
+@media screen and (min-width: 50em) {
+  .c-projects {
+    margin-bottom: 6rem;
+    /* margin between bottom of content and footer */
+  }
+}
+
+.project__block {
+  width: 100%;
+  /* projects full-width breakpoint 1 & 2 */
+}
+
+/* creates size of containers for project grid */
+@media screen and (min-width: 40em) {
+  /* these styles create the grid on larger screens */
+  .project__block:nth-child(1),
+  .project__block:nth-child(4) {
+    width: calc(58.5%);
+  }
+
+  .project__block:nth-child(2),
+  .project__block:nth-child(5) {
+    width: calc(38.5%);
+  }
+
+  .project__block:nth-child(3) {
+    width: calc(100%);
+  }
+}
+/* end media query */
+/* this section handles the margins between projects only */
+.project__block {
+  margin-bottom: 1rem;
+  /* margin for bottom of projects */
+}
+
+/* adds bottom margin to project that has a shared
+  block container with another project */
+.project__block--margin-b {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 40em) {
+  .project__block--margin-l {
+    margin-left: 1.5%;
+    /* class appended to project on left side of column */
+  }
+
+  .project__block--margin-r {
+    margin-right: 1.5%;
+    /* class appended to project on right side of column */
+  }
+
+  .project__block {
+    margin-bottom: 3%;
+    /* margin for projects to match left/right */
+  }
+
+  /* adds bottom margin to project that has a shared
+  block container with another project */
+  .project__block--margin-b {
+    margin-bottom: 5.13%;
+    /* margin for projects to match left/right 3% */
+    /* this was converted to take up same space as 3% width */
+    /* 3% * 1.71 = 5.13% -- same margin as a 100% project */
+    /* 58.5% / 100 to get the 1.71 figure */
+  }
+}
+/* end media query */
+@media screen and (min-width: 40em) {
+  /* do not remove inner container class -- this makes the overlay go 
+     over single projects only */
+  .project__block,
+  .project-container-inner {
+    position: relative;
+  }
+}
+/* this moves the time travel project before the
+   last two projects on smaller screens.
+   no functional reason for this, the bg color
+   of project is too close to the footer color
+   when in close proximity */
+.project__block:nth-child(1),
+.project__block:nth-child(2),
+.project__block:nth-child(3),
+.project__block:nth-child(5) {
+  order: 1;
+}
+
+.project__block:nth-child(4) {
+  order: 2;
+}
+
+/* sets projects back to normal order on larger screens */
+@media screen and (min-width: 40em) {
+  .project__block:nth-child(4) {
+    order: 1;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #PAGE #ABOUT
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.about-portrait {
+  float: left;
+  width: calc(45% - 1rem);
+  margin-right: 1rem;
+  position: relative;
+  top: 6px;
+}
+@media screen and (min-width: 40em) {
+  .about-portrait {
+    margin-right: 2rem;
+    width: calc(45% - 2rem);
+  }
+}
+
+.about-interests {
+  float: left;
+  width: 55%;
+  margin-bottom: 1rem;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #PAGE #PROJECT (IND)
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - layout */
+.proj-detail {
+  /* override standard margin style */
+}
+.proj-detail .box-full, .proj-detail .box-lrg, .proj-detail .box-sml, .proj-detail .box-half, .proj-detail .box-third {
+  margin-bottom: 0rem;
+}
+@media screen and (min-width: 40em) {
+  .proj-detail .box-full, .proj-detail .box-lrg, .proj-detail .box-sml, .proj-detail .box-half, .proj-detail .box-third {
+    margin-bottom: 0%;
+  }
+}
+
+.page-project {
+  margin-bottom: 3rem;
+}
+.page-project h2 {
+  color: #E9529D;
+  text-align: center;
+}
+@media screen and (min-width: 40em) {
+  .page-project h2 {
+    text-align: left;
+  }
+}
+
+.c-header.page-project {
+  margin-bottom: 0rem;
+  /* undo style set on index, about, contact */
+}
+
+.proj-header-img {
+  margin-bottom: 3rem;
+  /* below the image at top of page */
+}
+
+.proj-header-top {
+  border-bottom: 0.5rem solid #F1E41D;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+.proj-header-top .box-lrg, .proj-header-top .box-sml {
+  margin-bottom: 0;
+}
+
+.proj-summary {
+  margin-bottom: .5rem;
+}
+@media screen and (min-width: 40em) {
+  .proj-summary {
+    margin-bottom: 3rem;
+  }
+}
+
+.proj-sidebar ul {
+  margin-bottom: 1rem;
+}
+
+.page-project .proj-sidebar.box-sml {
+  order: -1;
+  /* roles, collaborators above summary on mobile */
+}
+@media screen and (min-width: 40em) {
+  .page-project .proj-sidebar.box-sml {
+    order: initial;
+    width: 32.5%;
+  }
+}
+
+.proj-info .box-sml, .proj-info .box-lrg {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 40em) {
+  .proj-info .box-sml, .proj-info .box-lrg {
+    margin-bottom: 3%;
+  }
+}
+
+.page-sidebar .box-half.marg-l {
+  order: -1;
+}
+@media screen and (min-width: 69em) {
+  .page-sidebar .box-half.marg-l {
+    order: initial;
+  }
+}
+
+.proj-sidebar .link-buttons {
+  text-align: center;
+}
+.proj-sidebar .link-buttons a {
+  white-space: nowrap;
+  /* ensures words in link don't break */
+  display: inline-block;
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 69em) {
+  .proj-sidebar .link-buttons {
+    text-align: right;
+  }
+}
+
+.proj-detail {
+  justify-content: flex-end;
+}
+.proj-detail div > h3:first-of-type {
+  border-top: 0.5rem solid #F1E41D;
+  padding-top: .5rem;
+}
+
+.proj-detail img {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 40em) {
+  .proj-detail img {
+    margin-bottom: 3%;
+  }
+}
+
+.marg-b {
+  /* #todo -- find out why margin not working here */
+  /*          want to use margin instead of padding */
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 40em) {
+  .marg-b {
+    padding-bottom: 3%;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - type */
+.proj-header-top h3 {
+  text-align: center;
+  margin-bottom: .5rem;
+  padding-right: 3px;
+}
+@media screen and (min-width: 40em) {
+  .proj-header-top h3 {
+    margin-bottom: 0;
+    text-align: right;
+  }
+}
+.proj-header-top h2 {
+  font-size: 1.5rem;
+  padding-left: 3px;
+  padding-bottom: .8rem;
+}
+@media screen and (min-width: 40em) {
+  .proj-header-top h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .proj-sidebar {
+    font-size: .9rem;
+  }
+}
+
+.proj-sidebar h4 {
+  padding-bottom: .5rem;
+}
+
+.page-project ul {
+  margin-bottom: 2rem;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #JAVASCRIPT
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.js-fade-out {
+  animation-name: fade-out;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.js-fade-in {
+  animation-name: fade-in;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  10% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #OVERRIDES / SPECIAL CIRCUMSTANCES
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* These are because of the way the white Instagram photos look
+   in the image grid. Moving up to accommodate for white space at
+   top, and centering so that when the two images break up on mobile,
+   they will still look centered. */
+.proj-detail-instagram {
+  justify-content: center;
+  margin-top: -20px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #TESTING
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.project--overlay {
+  transition: 400ms;
+  transition-timing-function: ease-in-out;
+}
+
+.project--overlay:hover {
+  box-shadow: 0 0 11px rgba(18, 18, 18, 0.3);
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */
