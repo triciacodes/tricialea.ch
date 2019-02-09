@@ -1,0 +1,38 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #MENU(MAIN) #NAVIGATION
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.nav-links {
+  margin-left: 0;
+}
+
+.nav-links__main-menu {
+  width: 92%;
+  margin: auto;
+  margin-bottom: 3rem;
+  // @include hover-transition;
+
+  @include media-query4 {
+    position: fixed;
+    top: .9rem;
+    left: 1.2rem;
+    width: auto;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+  }
+}
+
+svg.logo--menu {
+  height: 1em;
+}
+
+.c-social--nav {
+  display: none;     /* hides social links from nav bar small screens */
+  @include media-query4 {
+    // display: initial;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.2rem;
+    z-index: 1;
+  }
+}

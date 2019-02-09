@@ -1,0 +1,160 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #PAGE #PROJECT (IND)
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - layout */
+
+.proj-detail { 
+  /* override standard margin style */
+  .box-full, .box-lrg, .box-sml, .box-half, .box-third  {
+    margin-bottom: 0rem;
+    @include media-query3 {
+      margin-bottom: 0%;
+    }
+  }
+}
+
+.page-project {
+  margin-bottom: 3rem;
+  h2 {
+    color: $color-primary1;
+    text-align: center;
+    @include media-query3 {
+      text-align: left;
+    }
+  }
+}
+
+.c-header.page-project {
+  margin-bottom: 0rem; /* undo style set on index, about, contact */
+}
+
+.proj-header-img {
+  margin-bottom: 3rem; /* below the image at top of page */
+}
+
+.proj-header-top {
+  border-bottom: .5rem solid $color-primary2;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  .box-lrg, .box-sml {
+    margin-bottom: 0;
+  }
+}
+
+.proj-summary {
+  margin-bottom: .5rem;
+  @include media-query3 {
+    margin-bottom: 3rem;
+  }
+}
+
+.proj-sidebar ul {
+  margin-bottom: 1rem;
+}
+
+.page-project {
+  .proj-sidebar.box-sml {
+    order: -1; /* roles, collaborators above summary on mobile */
+    @include media-query3 {
+      order: initial;
+      width: 32.5%;
+    }
+  }
+}
+
+.proj-info .box-sml, .proj-info .box-lrg {
+  margin-bottom: 2rem;
+  @include media-query3 {
+    margin-bottom: 3%;
+  }
+}
+
+.page-sidebar {
+  .box-half.marg-l {
+    order: -1;
+    @include media-query5 {
+      order: initial;
+    }
+  }
+}
+
+.proj-sidebar .link-buttons {
+  text-align: center;
+  a { 
+    white-space: nowrap; /* ensures words in link don't break */
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+  @include media-query5 { 
+    text-align: right; 
+  }
+}
+
+.proj-detail {
+  justify-content: flex-end;
+  .box-lrg, .box-sml {
+    // margin-bottom: .5rem;
+    // margin-top: 1rem;
+  }
+  div > h3:first-of-type {
+    border-top: .5rem solid $color-primary2;
+    padding-top: .5rem;
+  }
+}
+
+.proj-detail img {
+  margin-bottom: 1rem;
+  @include media-query3 {
+    margin-bottom: 3%;
+  }
+}
+
+.marg-b {
+  /* #todo -- find out why margin not working here */
+  /*          want to use margin instead of padding */
+  padding-bottom: 1rem;
+  @include media-query3 {
+    padding-bottom: 3%;
+  }
+}
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - type */
+
+.proj-header-top {
+
+  h3 {
+    text-align: center;
+    margin-bottom: .5rem;
+    padding-right: 3px;
+    @include media-query3 {
+      margin-bottom: 0;
+      text-align: right;
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    padding-left: 3px;
+    padding-bottom: .8rem;
+    @include media-query3 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.proj-sidebar {
+  @include media-query3 {
+    font-size: .9rem;
+  }
+}
+
+.proj-sidebar h4 {
+  padding-bottom: .5rem;
+}
+
+.page-project ul {
+  margin-bottom: 2rem;
+}

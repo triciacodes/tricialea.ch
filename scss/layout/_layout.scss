@@ -1,0 +1,59 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #BASIC
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+html {
+  font-size: 16px;
+  background-color: $color-primary2;
+}
+
+img, embed, object, video {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  margin: auto;
+  padding-top: 1rem;
+  color: $color-neutral-dark;
+  font-family: $font-body;
+  font-weight: $font-weight-regular;
+  line-height: 1.7;
+  background-color: $color-background;
+  border-top: 0.5rem solid $color-primary2;
+  @include media-query3 {
+    padding-top: 2rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* sticky footer https://codepen.io/SelenIT/pen/QELpww */
+html { height: 100%; }
+body { min-height: 100%; min-width: 100%; display: table; }
+.content { display: table-row-group; }
+.footer { display: table-footer-group; }
+
+.page-index, .page-contact {
+  @include media-query4 {
+    padding-top: 7rem;
+  }
+}
+
+/* container for header and content */
+/* this is used on all pages */
+.c-main {
+  margin: auto;
+  width: 92%;
+  @include media-query4 {
+    width: 80%;
+  }
+}
+
+ul {
+  list-style-type: circle; 
+  margin-left: 1.3rem;
+}
+
+li {
+  line-height: 1.5;
+}

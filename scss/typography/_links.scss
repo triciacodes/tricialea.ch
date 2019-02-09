@@ -1,0 +1,68 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #LINKS
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+a, 
+nav a svg path,
+footer a svg path {
+  @include hover-transition;
+}
+
+a:link {
+  color: $color-accent-medium;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover {
+  color: $color-primary1;
+  font-weight: 700;
+}
+
+a:visited {
+  color: $color-accent-medium;
+  font-weight: 700;
+}
+
+a.pink-link:link {
+  color: $color-primary1;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a.pink-link:hover {
+  color: $color-primary1;
+  font-weight: 700;
+}
+
+a.pink-link:visited {
+  color: $color-primary1;
+  font-weight: 700;
+}
+
+nav, footer {
+    a:link, a:visited {
+      color: $color-neutral-medium;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $color-primary1;
+    }
+
+    a svg path:hover {
+      fill: $color-primary1;
+    }
+}
+
+a.button:link {
+  color: $color-primary1;
+  text-decoration: none;
+}
+
+a.button:hover, a.button:visited:hover {
+  color: $color-background;
+}
+
+a.button:visited {
+  color: $color-primary1;
+}

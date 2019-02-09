@@ -1,0 +1,91 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #FOOTER
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+footer ul {
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+footer li {
+  padding-bottom: 0;
+  line-height: 1;
+}
+
+.c-footer {
+  width: 100%;
+  position: relative;
+  z-index: 99;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1.2rem; 
+  @include media-query3 {
+    padding: 1.5rem; 
+  }
+  background-color: $color-primary2;
+
+  >div:nth-child(1) {
+    flex-grow: 2;     /* navigation expands to fill space */
+    min-width: 50%;
+    -webkit-flex: 2 0 50%;     /* bug with min-width on ipad */
+  }
+
+  >div:nth-child(2) {
+    min-width: 25%;
+    align-self: flex-end;
+  }
+
+  >div:nth-child(3) {
+    flex-grow: 2;     /* social icons expand to fill space */
+    min-width: 50%;
+    -webkit-flex: 2 0 50%;     /* bug with min-width on ipad */
+  }
+
+  >div:nth-child(4) {
+    min-width: 100%;
+    -webkit-flex: 1 1 100%; 
+    align-self: flex-end;
+  }
+  
+  @include media-query3 {
+    >div:nth-child(4) {
+      min-width: 25%;
+      -webkit-flex: 1 1 25%; 
+    }
+  }
+
+  >div:nth-child(1), >div:nth-child(2) {
+    margin-bottom: 2.5rem;     /* margin only */
+  }
+
+}
+
+.nav-links--footer {
+  display: none;     /* hides second set of menu links on mobile */
+  @include media-query3 {
+      display: inline-block;     /* shows footer links larger screens */
+  }
+}
+
+.c-social--footer {
+  align-self: flex-start;
+  order: -1;
+  @include media-query3 {
+    order: initial;
+    align-self: flex-end;
+  }
+}
+
+.social__list--footer {
+  line-height: 0;
+}
+
+.social__icon--footer {
+  display: inline-block;
+  //padding-right: 5px;
+}
+
+.logo--footer {
+  height: 1rem;
+}

@@ -1,0 +1,31 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #JAVASCRIPT
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.js-fade-out {
+  animation-name: fade-out;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+  0% {opacity: 1}
+  90% {opacity: 0; visibility: visible;}
+  100% {opacity: 0; visibility: hidden;}
+}
+
+.js-fade-in {
+  animation-name: fade-in;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  0% {opacity: 0; visibility: hidden;}
+  10% {opacity: 0; visibility: visible;}
+  100% {opacity: 1}
+}

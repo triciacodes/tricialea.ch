@@ -1,0 +1,104 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #PAGE #INDEX #CONTENT
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.c-projects {  /*  outer container for ALL projects on index page */
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  @include media-query3 {
+    margin-bottom: 3rem;     /* margin between bottom of content and footer */
+  }
+  @include media-query4 {
+    margin-bottom: 6rem;     /* margin between bottom of content and footer */
+  }
+}
+
+.project__block {
+  width: 100%; /* projects full-width breakpoint 1 & 2 */
+}
+
+/* creates size of containers for project grid */
+@include media-query3 {
+  /* these styles create the grid on larger screens */
+  .project__block:nth-child(1),
+  .project__block:nth-child(4) {
+    width: calc(58.5%);
+  }
+
+  .project__block:nth-child(2),
+  .project__block:nth-child(5) {
+    width: calc(38.5%);
+  }
+
+  .project__block:nth-child(3) {
+    width: calc(100%);
+  }
+} /* end media query */
+
+/* this section handles the margins between projects only */
+
+.project__block {
+    margin-bottom: 1rem;     /* margin for bottom of projects */
+}
+
+/* adds bottom margin to project that has a shared
+  block container with another project */
+.project__block--margin-b {
+  margin-bottom: 1rem;
+}
+
+@include media-query3 {
+  .project__block--margin-l {
+    margin-left: 1.5%;     /* class appended to project on left side of column */
+  }
+
+  .project__block--margin-r {
+    margin-right: 1.5%;     /* class appended to project on right side of column */
+  }
+
+  .project__block {
+    margin-bottom: 3%;     /* margin for projects to match left/right */
+  }
+
+  /* adds bottom margin to project that has a shared
+  block container with another project */
+  .project__block--margin-b {
+    margin-bottom: 5.13%; /* margin for projects to match left/right 3% */
+                          /* this was converted to take up same space as 3% width */
+                          /* 3% * 1.71 = 5.13% -- same margin as a 100% project */
+                          /* 58.5% / 100 to get the 1.71 figure */
+  }
+} /* end media query */
+
+@include media-query3 {
+  /* do not remove inner container class -- this makes the overlay go 
+     over single projects only */
+  .project__block, 
+  .project-container-inner {
+    position: relative;
+  }
+}
+
+/* this moves the time travel project before the
+   last two projects on smaller screens.
+   no functional reason for this, the bg color
+   of project is too close to the footer color
+   when in close proximity */
+.project__block:nth-child(1), 
+.project__block:nth-child(2), 
+.project__block:nth-child(3),
+.project__block:nth-child(5) {
+  order: 1;
+}
+.project__block:nth-child(4) {
+  order: 2;
+}
+
+/* sets projects back to normal order on larger screens */
+.project__block:nth-child(4) {
+  @include media-query3 {
+    order: 1;
+  }
+}

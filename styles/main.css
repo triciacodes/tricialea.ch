@@ -1,4 +1,57 @@
-/* CSS reset in a separate file */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
       #BETTER BOX MODEL
 \* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -9,7 +62,128 @@
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
-      #HELPER
+      #JAVASCRIPT
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.js-fade-out {
+  animation-name: fade-out;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.js-fade-in {
+  animation-name: fade-in;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  10% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #BASIC
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+html {
+  font-size: 16px;
+  background-color: #F1E41D;
+}
+
+img, embed, object, video {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  margin: auto;
+  padding-top: 1rem;
+  color: #484647;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  background-color: #ffffff;
+  border-top: 0.5rem solid #F1E41D;
+}
+@media screen and (min-width: 40em) {
+  body {
+    padding-top: 2rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* sticky footer https://codepen.io/SelenIT/pen/QELpww */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  min-width: 100%;
+  display: table;
+}
+
+.content {
+  display: table-row-group;
+}
+
+.footer {
+  display: table-footer-group;
+}
+
+@media screen and (min-width: 50em) {
+  .page-index, .page-contact {
+    padding-top: 7rem;
+  }
+}
+
+/* container for header and content */
+/* this is used on all pages */
+.c-main {
+  margin: auto;
+  width: 92%;
+}
+@media screen and (min-width: 50em) {
+  .c-main {
+    width: 80%;
+  }
+}
+
+ul {
+  list-style-type: circle;
+  margin-left: 1.3rem;
+}
+
+li {
+  line-height: 1.5;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #LAYOUT
 \* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 .box-flex {
   display: flex;
@@ -114,79 +288,194 @@
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
-      #BASIC
+      #MENU(MAIN) #NAVIGATION
 \* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-html {
-  font-size: 16px;
-  background-color: #F1E41D;
+.nav-links {
+  margin-left: 0;
 }
 
-img, embed, object, video {
-  display: block;
-  max-width: 100%;
-}
-
-body {
+.nav-links__main-menu {
+  width: 92%;
   margin: auto;
-  padding-top: 1rem;
-  color: #484647;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  background-color: #ffffff;
-  border-top: 0.5rem solid #F1E41D;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 50em) {
+  .nav-links__main-menu {
+    position: fixed;
+    top: .9rem;
+    left: 1.2rem;
+    width: auto;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+  }
+}
+
+svg.logo--menu {
+  height: 1em;
+}
+
+.c-social--nav {
+  display: none;
+  /* hides social links from nav bar small screens */
+}
+@media screen and (min-width: 50em) {
+  .c-social--nav {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.2rem;
+    z-index: 1;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #HEADER
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.c-header, .c-about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 40em) {
-  body {
-    padding-top: 2rem;
-    font-size: 1.125rem;
+  .c-header, .c-about {
+    margin-bottom: 3rem;
   }
 }
-
-/* sticky footer https://codepen.io/SelenIT/pen/QELpww */
-html {
-  height: 100%;
-}
-
-body {
-  min-height: 100%;
-  min-width: 100%;
-  display: table;
-}
-
-.content {
-  display: table-row-group;
-}
-
-.footer {
-  display: table-footer-group;
-}
-
 @media screen and (min-width: 50em) {
-  .page-index, .page-contact {
-    padding-top: 7rem;
+  .c-header, .c-about {
+    margin-bottom: 4rem;
   }
 }
 
-/* container for header and content */
-/* this is used on all pages */
-.c-main {
+.header--right, .header--left {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.header--left img {
+  width: 80%;
   margin: auto;
-  width: 92%;
+}
+@media screen and (min-width: 40em) and (max-width: 50em) {
+  .header--left img {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 50em) {
-  .c-main {
+  .header--left img {
     width: 80%;
   }
 }
 
-ul {
-  list-style-type: circle;
-  margin-left: 1.3rem;
+@media screen and (min-width: 40em) {
+  .header--right {
+    margin-left: 1.5%;
+    width: 58.5%;
+  }
 }
 
-li {
-  line-height: 1.5;
+@media screen and (min-width: 40em) {
+  .header--left {
+    margin-right: 1.5%;
+    width: 38.5%;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #FOOTER
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+footer ul {
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+footer li {
+  padding-bottom: 0;
+  line-height: 1;
+}
+
+.c-footer {
+  width: 100%;
+  position: relative;
+  z-index: 99;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1.2rem;
+  background-color: #F1E41D;
+}
+@media screen and (min-width: 40em) {
+  .c-footer {
+    padding: 1.5rem;
+  }
+}
+.c-footer > div:nth-child(1) {
+  flex-grow: 2;
+  /* navigation expands to fill space */
+  min-width: 50%;
+  -webkit-flex: 2 0 50%;
+  /* bug with min-width on ipad */
+}
+.c-footer > div:nth-child(2) {
+  min-width: 25%;
+  align-self: flex-end;
+}
+.c-footer > div:nth-child(3) {
+  flex-grow: 2;
+  /* social icons expand to fill space */
+  min-width: 50%;
+  -webkit-flex: 2 0 50%;
+  /* bug with min-width on ipad */
+}
+.c-footer > div:nth-child(4) {
+  min-width: 100%;
+  -webkit-flex: 1 1 100%;
+  align-self: flex-end;
+}
+@media screen and (min-width: 40em) {
+  .c-footer > div:nth-child(4) {
+    min-width: 25%;
+    -webkit-flex: 1 1 25%;
+  }
+}
+.c-footer > div:nth-child(1), .c-footer > div:nth-child(2) {
+  margin-bottom: 2.5rem;
+  /* margin only */
+}
+
+.nav-links--footer {
+  display: none;
+  /* hides second set of menu links on mobile */
+}
+@media screen and (min-width: 40em) {
+  .nav-links--footer {
+    display: inline-block;
+    /* shows footer links larger screens */
+  }
+}
+
+.c-social--footer {
+  align-self: flex-start;
+  order: -1;
+}
+@media screen and (min-width: 40em) {
+  .c-social--footer {
+    order: initial;
+    align-self: flex-end;
+  }
+}
+
+.social__list--footer {
+  line-height: 0;
+}
+
+.social__icon--footer {
+  display: inline-block;
+}
+
+.logo--footer {
+  height: 1rem;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
@@ -426,194 +715,26 @@ a.button:visited {
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
-      #MENU(MAIN) #NAVIGATION
+      #PAGE #ABOUT
 \* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-.nav-links {
-  margin-left: 0;
-}
-
-.nav-links__main-menu {
-  width: 92%;
-  margin: auto;
-  margin-bottom: 3rem;
-}
-@media screen and (min-width: 50em) {
-  .nav-links__main-menu {
-    position: fixed;
-    top: .9rem;
-    left: 1.2rem;
-    width: auto;
-    transform: rotate(90deg);
-    transform-origin: bottom left;
-  }
-}
-
-svg.logo--menu {
-  height: 1em;
-}
-
-.c-social--nav {
-  display: none;
-  /* hides social links from nav bar small screens */
-}
-@media screen and (min-width: 50em) {
-  .c-social--nav {
-    position: fixed;
-    bottom: 1.5rem;
-    left: 1.2rem;
-    z-index: 1;
-  }
-}
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
-      #HEADER
-\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-.c-header, .c-about {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-}
-@media screen and (min-width: 40em) {
-  .c-header, .c-about {
-    margin-bottom: 3rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  .c-header, .c-about {
-    margin-bottom: 4rem;
-  }
-}
-
-.header--right, .header--left {
-  width: 100%;
+.about-portrait {
+  float: left;
+  width: calc(45% - 1rem);
+  margin-right: 1rem;
   position: relative;
-  margin-bottom: 2em;
-}
-
-.header--left img {
-  width: 80%;
-  margin: auto;
-}
-@media screen and (min-width: 40em) and (max-width: 50em) {
-  .header--left img {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 50em) {
-  .header--left img {
-    width: 80%;
-  }
-}
-
-@media screen and (min-width: 40em) {
-  .header--right {
-    margin-left: 1.5%;
-    width: 58.5%;
-  }
-}
-
-@media screen and (min-width: 40em) {
-  .header--left {
-    margin-right: 1.5%;
-    width: 38.5%;
-  }
-}
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
-      #FOOTER
-\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-footer ul {
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-footer li {
-  padding-bottom: 0;
-  line-height: 1;
-}
-
-.c-footer {
-  width: 100%;
-  position: relative;
-  z-index: 99;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 1.2rem;
-  background-color: #F1E41D;
+  top: 6px;
 }
 @media screen and (min-width: 40em) {
-  .c-footer {
-    padding: 1.5rem;
-  }
-}
-.c-footer > div:nth-child(1) {
-  flex-grow: 2;
-  /* navigation expands to fill space */
-  min-width: 50%;
-  -webkit-flex: 2 0 50%;
-  /* bug with min-width on ipad */
-}
-.c-footer > div:nth-child(2) {
-  min-width: 25%;
-  align-self: flex-end;
-}
-.c-footer > div:nth-child(3) {
-  flex-grow: 2;
-  /* social icons expand to fill space */
-  min-width: 50%;
-  -webkit-flex: 2 0 50%;
-  /* bug with min-width on ipad */
-}
-.c-footer > div:nth-child(4) {
-  min-width: 100%;
-  -webkit-flex: 1 1 100%;
-  align-self: flex-end;
-}
-@media screen and (min-width: 40em) {
-  .c-footer > div:nth-child(4) {
-    min-width: 25%;
-    -webkit-flex: 1 1 25%;
-  }
-}
-.c-footer > div:nth-child(1), .c-footer > div:nth-child(2) {
-  margin-bottom: 2.5rem;
-  /* margin only */
-}
-
-.nav-links--footer {
-  display: none;
-  /* hides second set of menu links on mobile */
-}
-@media screen and (min-width: 40em) {
-  .nav-links--footer {
-    display: inline-block;
-    /* shows footer links larger screens */
+  .about-portrait {
+    margin-right: 2rem;
+    width: calc(45% - 2rem);
   }
 }
 
-.c-social--footer {
-  align-self: flex-start;
-  order: -1;
-}
-@media screen and (min-width: 40em) {
-  .c-social--footer {
-    order: initial;
-    align-self: flex-end;
-  }
-}
-
-.social__list--footer {
-  line-height: 0;
-}
-
-.social__icon--footer {
-  display: inline-block;
-}
-
-.logo--footer {
-  height: 1rem;
+.about-interests {
+  float: left;
+  width: 55%;
+  margin-bottom: 1rem;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
@@ -730,29 +851,6 @@ footer li {
   .project__block:nth-child(4) {
     order: 1;
   }
-}
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
-      #PAGE #ABOUT
-\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-.about-portrait {
-  float: left;
-  width: calc(45% - 1rem);
-  margin-right: 1rem;
-  position: relative;
-  top: 6px;
-}
-@media screen and (min-width: 40em) {
-  .about-portrait {
-    margin-right: 2rem;
-    width: calc(45% - 2rem);
-  }
-}
-
-.about-interests {
-  float: left;
-  width: 55%;
-  margin-bottom: 1rem;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
@@ -923,63 +1021,6 @@ footer li {
 
 .page-project ul {
   margin-bottom: 2rem;
-}
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
-      #JAVASCRIPT
-\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-.js-fade-out {
-  animation-name: fade-out;
-  animation-duration: 400ms;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 0;
-    visibility: visible;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-.js-fade-in {
-  animation-name: fade-in;
-  animation-duration: 400ms;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  10% {
-    opacity: 0;
-    visibility: visible;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
-      #OVERRIDES / SPECIAL CIRCUMSTANCES
-\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/* These are because of the way the white Instagram photos look
-   in the image grid. Moving up to accommodate for white space at
-   top, and centering so that when the two images break up on mobile,
-   they will still look centered. */
-.proj-detail-instagram {
-  justify-content: center;
-  margin-top: -20px;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\

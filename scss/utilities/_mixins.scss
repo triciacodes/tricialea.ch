@@ -1,0 +1,44 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+//    #MIXINS
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+@mixin hover-transition {
+  transition: 400ms;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin media-query1 {
+  @media screen and (max-width: #{$breakpoint1}) {
+    @content;
+  }
+}
+
+@mixin media-query2 {
+  @media screen and (min-width: #{$breakpoint1}) {
+    @content;
+  }
+}
+
+@mixin media-query3 {
+  @media screen and (min-width: #{$breakpoint2}) {
+    @content;
+  }
+}
+
+@mixin media-query3a {
+  @media screen and (min-width: #{$breakpoint2}) and (max-width: #{$breakpoint3}) {
+    @content;
+  }
+}
+
+@mixin media-query4 {
+  @media screen and (min-width: #{$breakpoint3}) {
+    @content;
+  }
+}
+
+@mixin media-query5 {
+  @media screen and (min-width: #{$breakpoint4}) {
+    @content;
+  }
+}
