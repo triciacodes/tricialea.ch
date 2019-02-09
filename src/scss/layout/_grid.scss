@@ -1,0 +1,93 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
+      #LAYOUT
+\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.box-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.box-center {
+  align-self: center;
+}
+
+/* ************ #Grid Boxes ************ */
+
+.box-full {
+  width: 100%;
+}
+
+.box-lrg {
+  width: 100%;
+  @include media-query3 {
+    width: 58.5%;
+  }
+}
+
+.box-sml {
+  width: 100%;
+  @include media-query3 {
+    width: 38.5%;
+  }
+}
+
+.proj-sidebar {
+  .box-half {
+  width: 100%;
+    @include media-query5 {
+      width: 48.5%;
+    }
+  }
+}
+
+.box-half {
+  width: 100%;
+  @include media-query3 {
+    width: 48.5%;
+  }
+}
+
+.box-third {
+  width: 100%;
+  @include media-query5 {
+    width: 31.33333%;
+  }
+}
+
+/* ************ #Margins ************ */
+
+/* Standard margin */
+.box-full, .box-lrg, .box-sml, .box-half, .box-third  {
+  margin-bottom: 1rem;
+  @include media-query3 {
+    margin-bottom: 3%;
+  }
+}
+
+.marg-r {
+  @include media-query3 {
+    margin-right: 1.5%;
+  }
+}
+
+.marg-l {
+  @include media-query3 {
+    margin-left: 1.5%;
+  }
+}
+
+.box-half.marg-r {
+  margin-right: 0;
+  @include media-query5 {
+    margin-right: 1.5%;
+  }
+}
+
+.box-half.marg-l {
+  margin-left: 0;
+  @include media-query5 {
+    margin-left: 1.5%;
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "tricialea.ch",
+  "version": "1.0.0",
+  "description": "Tricia Leach's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "run-p sass fonts images content watch",
+    "sass": "node-sass src/scss/styles.scss dist/assets/styles/main.css",
+    "fonts": "cp -r src/assets/fonts dist/assets",
+    "images": "cp -r src/assets/img dist",
+    "content": "cp -rv src/content/* dist",
+    "watch": "rerun-script",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "watches": {
+    "content": [
+      "src/content/**/*.html",
+      "src/content/**/*.php"
+    ],
+    "sass": [
+      "src/scss/**/*.scss"
+    ],
+    "js": [
+      "src/js/**/*.js"
+    ],
+    "img": [
+      "src/assets/img/**/*.*"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tricialeach/tricialea.ch.git"
+  },
+  "author": "Tricia Leach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tricialeach/tricialea.ch/issues"
+  },
+  "homepage": "https://github.com/tricialeach/tricialea.ch#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.11.0",
+    "rerun-script": "^0.6.0"
+  }
+}

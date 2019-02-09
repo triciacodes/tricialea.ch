@@ -1,5 +1,8 @@
+/node_modules
 /ignore
+.sass-cache/
+
+/dist
 /contact
 /projects
 /img/projects
-.sass-cache/
