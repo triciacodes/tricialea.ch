@@ -1,6 +1,6 @@
 /node_modules
 /ignore
-.sass-cache/
+/.sass-cache/
 
 /dist
 /contact
