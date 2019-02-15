@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "run-p sass fonts images content watch",
+    "dev": "run-p sass js fonts images content watch",
     "sass": "node-sass src/scss/styles.scss dist/assets/styles/main.css",
     "fonts": "cp -r src/assets/fonts dist/assets",
     "images": "cp -r src/assets/img dist",
     "content": "cp -rv src/content/* dist",
+    "js": "cp -rv src/js/* dist/assets/js",
     "watch": "rerun-script",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
