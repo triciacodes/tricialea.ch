@@ -11,8 +11,10 @@
     <!-- <p>I have eight years of financial analysis/project management experience preceeding my years at Portland State. During that time I acquired many skills (<a href="/assets/tricia-leach-resume-dec-2017-web.pdf">pdf resume</a>) that complement the work I've been doing with programming. So while I may be looking for a junior dev position, I'll be bringing over a decade of professional experience with me, as well as a keen eye for design. -->
     </p>
     <h3>Drop me a line</h3>
-    <p>Would you like to chat about roles at your company, or freelance projects? Get in touch at <a href="mailto:hi@tricialea.ch">hi@tricialea.ch</a>
-    </p>
+    <p>Would you like to chat about roles at your company, or freelance projects? Get in touch at <a href="mailto:hi@tricialea.ch">hi@tricialea.ch</a></p>
+    <h3>Download my resume</h3>
+    <p>You can find a copy <a target="_blank" href="/assets/tricialeach-resume-feb-2019.pdf">right here</a>.</p>
+
   </div>
 
   <div class="box-half  marg-l  box-flex">
