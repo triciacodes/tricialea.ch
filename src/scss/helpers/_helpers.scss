@@ -1,5 +1,17 @@
+.anchor-link-position {
+  position: absolute;
+  top: -10px;
+  @include media-query4 {
+    top: -20px;
+  }
+}
+
+.position-rel {
+  position: relative;
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
-      #JAVASCRIPT
+      #ANIMATION
 \* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 .fade-out {

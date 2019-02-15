@@ -1,5 +1,5 @@
-<p style="position:relative;">
-    <a id="page-about" style="position:absolute; top:-40px;"></a>
+<p class="position-rel">
+  <a id="page-about" class="anchor-link-position"></a>
 </p>
 
 <h2>A little about me</h2>

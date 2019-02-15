@@ -1,5 +1,5 @@
-<p style="position:relative;">
-  <a id="page-projects" style="position:absolute; top:-40px;"></a>
+<p class="position-rel">
+  <a id="page-projects" class="anchor-link-position"></a>
 </p>
 
 <h2>Recent projects</h2>
