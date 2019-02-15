@@ -1,10 +1,7 @@
-</div> <!-- end .content -->
-
-<!-- - - - - - - - - - - - - - - - #FOOTER - - - - - - - - - - - - - - - -->
-    
 <footer class="footer">
 
   <div id="c-footer" class="c-footer">
+    
     <div class="nav-links nav-links--footer">
       <ul>
         <li><a href="/">Home</a>
@@ -60,19 +57,6 @@
       <p><a href="mailto:hi@tricialea.ch">hi@tricialea.ch</a></p>
     </div>
 
-  </div> <!-- end .c-footer -->
+  </div>
 
-</footer> 
-    
-    
-
-
-<!-- - - - - - - - - - - - - - - - #JAVASCRIPT - - - - - - - - - - - - - - - --> 
-
-	<!-- INCLUDED AT THE BOTTOM TO ALLOW CONTENT TO LOAD BEFORE SCRIPTS -->
-    <!-- Obtain jQuery updates here https://developers.google.com/speed/libraries -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="/assets/js/scripts.js"></script>
-
-</body>
-</html>
+</footer>
