@@ -1,32 +1,31 @@
-// - - - - - - - - - - - - - - - - - - - - - - - - HIDE NAV MENU ON SCROLL
+// - - - - - - - - - - - - - - - - - - - - - - - - FADE NAV MENU ON SCROLL
 
 // when user scrolls to just above the footer, 
-// add a css animation to fade out (js-fade-out)
-// when user scrolls back up page, remove js-fade-out
-// and add js-fade-in class
+// add css animation to fade out nav
+// when user scrolls back up page, fade nav back in
 
-function hideNav() {
-  var nav = document.querySelectorAll("#nav-links, #c-social--nav");
-  var footer = document.getElementById('c-footer');
+function fadeNav() {
+  var navItems = Array(...document.querySelectorAll(".js-fade-nav"))
+  var footer = document.getElementById('c-footer')
 
-  var scrollHeight = window.scrollY + window.innerHeight;
-  var topOfFooter = document.body.offsetHeight - footer.offsetHeight;
+  var scrollHeight = window.scrollY + window.innerHeight
+  var topOfFooter = document.body.offsetHeight - footer.offsetHeight
 
   if (scrollHeight > topOfFooter) {
-    for (i = 0; i < nav.length; i++) {
-      nav[i].classList.add('js-fade-out');
-      nav[i].classList.remove('js-fade-in');
-    }
+    navItems.forEach(item => {
+      item.classList.add('fade-out')
+      item.classList.remove('fade-in')
+    })
   } else if (scrollHeight < topOfFooter) {
-    for (i = 0; i < nav.length; i++) {
-      if (nav[i].classList.contains('js-fade-out')) {
-        nav[i].classList.remove('js-fade-out');
-        nav[i].classList.add('js-fade-in');
+    navItems.forEach(item => {
+      if (item.classList.contains('fade-out')) {
+        item.classList.remove('fade-out')
+        item.classList.add('fade-in')
       }
-    }
+    })
   }
-};
+}
 
-window.addEventListener('scroll', hideNav);
+window.addEventListener('scroll', fadeNav)
 
 

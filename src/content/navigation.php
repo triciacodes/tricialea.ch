@@ -1,6 +1,6 @@
 <nav>
 
-  <div id="nav-links" class="nav-links nav-links__main-menu">
+  <div class="nav-links nav-links__main-menu js-fade-nav">
     <ul>
       <li><a href="/"><span class="branding branding--nav">Tricia</span></a></li>
       <li><a href="/#page-projects">Projects</a>
@@ -12,7 +12,7 @@
     </ul>
   </div>  
 
-  <div id="c-social--nav" class="social  c-social--nav">
+  <div class="social  c-social--nav">
     <ul>
       <li class="social__icon  social__icon--header">
         <a href="https://github.com/tricialeach">

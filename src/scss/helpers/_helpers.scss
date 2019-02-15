@@ -2,7 +2,7 @@
       #JAVASCRIPT
 \* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-.js-fade-out {
+.fade-out {
   animation-name: fade-out;
   animation-duration: 400ms;
   animation-timing-function: ease-in-out;
@@ -16,7 +16,7 @@
   100% {opacity: 0; visibility: hidden;}
 }
 
-.js-fade-in {
+.fade-in {
   animation-name: fade-in;
   animation-duration: 400ms;
   animation-timing-function: ease-in-out;
