@@ -25,6 +25,5 @@
   <script src="https://use.typekit.net/kre4nye.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <!-- CSS STYLES -->
-  <link rel="stylesheet" href="/assets/styles/reset.css" />  
   <link rel="stylesheet" href="/assets/styles/main.css" />
 </head>
