@@ -8,7 +8,7 @@
   /* override standard margin style */
   .box-full, .box-lrg, .box-sml, .box-half, .box-third  {
     margin-bottom: 0rem;
-    @include media-query3 {
+    @include mq-sm {
       margin-bottom: 0%;
     }
   }
@@ -19,7 +19,7 @@
   h2 {
     color: $color-primary1;
     text-align: center;
-    @include media-query3 {
+    @include mq-sm {
       text-align: left;
     }
   }
@@ -44,7 +44,7 @@
 
 .proj-summary {
   margin-bottom: .5rem;
-  @include media-query3 {
+  @include mq-sm {
     margin-bottom: 3rem;
   }
 }
@@ -56,7 +56,7 @@
 .page-project {
   .proj-sidebar.box-sml {
     order: -1; /* roles, collaborators above summary on mobile */
-    @include media-query3 {
+    @include mq-sm {
       order: initial;
       width: 32.5%;
     }
@@ -65,7 +65,7 @@
 
 .proj-info .box-sml, .proj-info .box-lrg {
   margin-bottom: 2rem;
-  @include media-query3 {
+  @include mq-sm {
     margin-bottom: 3%;
   }
 }
@@ -73,7 +73,7 @@
 .page-sidebar {
   .box-half.marg-l {
     order: -1;
-    @include media-query5 {
+    @include mq-lg {
       order: initial;
     }
   }
@@ -86,7 +86,7 @@
     display: inline-block;
     margin-bottom: 1em;
   }
-  @include media-query5 { 
+  @include mq-lg { 
     text-align: right; 
   }
 }
@@ -105,7 +105,7 @@
 
 .proj-detail img {
   margin-bottom: 1rem;
-  @include media-query3 {
+  @include mq-sm {
     margin-bottom: 3%;
   }
 }
@@ -114,7 +114,7 @@
   /* #todo -- find out why margin not working here */
   /*          want to use margin instead of padding */
   padding-bottom: 1rem;
-  @include media-query3 {
+  @include mq-sm {
     padding-bottom: 3%;
   }
 }
@@ -129,7 +129,7 @@
     text-align: center;
     margin-bottom: .5rem;
     padding-right: 3px;
-    @include media-query3 {
+    @include mq-sm {
       margin-bottom: 0;
       text-align: right;
     }
@@ -139,14 +139,14 @@
     font-size: 1.5rem;
     padding-left: 3px;
     padding-bottom: .8rem;
-    @include media-query3 {
+    @include mq-sm {
       font-size: 1.8rem;
     }
   }
 }
 
 .proj-sidebar {
-  @include media-query3 {
+  @include mq-sm {
     font-size: .9rem;
   }
 }

@@ -12,7 +12,7 @@
   margin-bottom: 3rem;
   // @include hover-transition;
 
-  @include media-query4 {
+  @include mq-md {
     position: fixed;
     top: .9rem;
     left: 1.2rem;
@@ -28,7 +28,7 @@ svg.logo--menu {
 
 .c-social--nav {
   display: none;     /* hides social links from nav bar small screens */
-  @include media-query4 {
+  @include mq-md {
     // display: initial;
     position: fixed;
     bottom: 1.5rem;
