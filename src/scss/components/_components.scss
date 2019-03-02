@@ -19,13 +19,13 @@
 
   svg {
     width: 30px;     /* larger icons on small screens */
-    @include media-query4 {
+    @include mq-md {
       width: 25px;
     }
   }
   li {
     padding-right: 15px;     /* larger tap targets on small screens */
-    @include media-query4 {
+    @include mq-md {
       padding-right: 10px;
     }
   }
@@ -47,7 +47,7 @@
     font-weight: $font-weight-medium;
     letter-spacing: .1rem;
     text-transform: uppercase;
-    @include media-query3 {
+    @include mq-sm {
       padding-right: 2rem;
     }
   }
@@ -65,7 +65,7 @@
   border-radius: 3px;
   text-align: center;
   width: 10em;
-  @include media-query5 {
+  @include mq-lg {
     margin-bottom: .7em;
     display: inline-block;
   }

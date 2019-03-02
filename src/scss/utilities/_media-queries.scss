@@ -1,0 +1,39 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+//    #MEDIA-QUERIES
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+@mixin mq-xs {
+  @media screen and (max-width: #{$xs}) {
+    @content;
+  }
+}
+
+@mixin mq-sm {
+  @media screen and (min-width: #{$sm}) {
+    @content;
+  }
+}
+
+@mixin mq-sm-md {
+  @media screen and (min-width: #{$sm}) and (max-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin mq-md {
+  @media screen and (min-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin mq-lg {
+  @media screen and (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin mq-xl {
+  @media screen and (min-width: #{$xl}) {
+    @content;
+  }
+}

@@ -7,10 +7,10 @@
   flex-wrap: wrap;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  @include media-query3 {
+  @include mq-sm {
     margin-bottom: 3rem;     /* margin between bottom of content and footer */
   }
-  @include media-query4 {
+  @include mq-md {
     margin-bottom: 6rem;     /* margin between bottom of content and footer */
   }
 }
@@ -20,7 +20,7 @@
 }
 
 /* creates size of containers for project grid */
-@include media-query3 {
+@include mq-sm {
   /* these styles create the grid on larger screens */
   .project__block:nth-child(1),
   .project__block:nth-child(4) {
@@ -49,7 +49,7 @@
   margin-bottom: 1rem;
 }
 
-@include media-query3 {
+@include mq-sm {
   .project__block--margin-l {
     margin-left: 1.5%;     /* class appended to project on left side of column */
   }
@@ -72,7 +72,7 @@
   }
 } /* end media query */
 
-@include media-query3 {
+@include mq-sm {
   /* do not remove inner container class -- this makes the overlay go 
      over single projects only */
   .project__block, 
@@ -98,7 +98,7 @@
 
 /* sets projects back to normal order on larger screens */
 .project__block:nth-child(4) {
-  @include media-query3 {
+  @include mq-sm {
     order: 1;
   }
 }

@@ -7,10 +7,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 2rem;
-  @include media-query3 {
+  @include mq-sm {
     margin-bottom: 3rem;
   }
-  @include media-query4 {
+  @include mq-md {
     margin-bottom: 4rem;
   }
 }
@@ -24,23 +24,23 @@
 .header--left img {
   width: 80%;
   margin: auto;
-  @include media-query3a {
+  @include mq-sm-md {
     width: 100%;
   }
-  @include media-query4 {
+  @include mq-md {
     width: 80%;
   }
 }
 
 .header--right {
-  @include media-query3 {
+  @include mq-sm {
     margin-left: 1.5%;
     width: 58.5%;
   }
 }
 
 .header--left {
-  @include media-query3 {
+  @include mq-sm {
     margin-right: 1.5%;
     width: 38.5%;
   }

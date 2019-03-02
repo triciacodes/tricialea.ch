@@ -21,14 +21,14 @@
 
 .box-lrg {
   width: 100%;
-  @include media-query3 {
+  @include mq-sm {
     width: 58.5%;
   }
 }
 
 .box-sml {
   width: 100%;
-  @include media-query3 {
+  @include mq-sm {
     width: 38.5%;
   }
 }
@@ -36,7 +36,7 @@
 .proj-sidebar {
   .box-half {
   width: 100%;
-    @include media-query5 {
+    @include mq-lg {
       width: 48.5%;
     }
   }
@@ -44,14 +44,14 @@
 
 .box-half {
   width: 100%;
-  @include media-query3 {
+  @include mq-sm {
     width: 48.5%;
   }
 }
 
 .box-third {
   width: 100%;
-  @include media-query5 {
+  @include mq-lg {
     width: 31.33333%;
   }
 }
@@ -61,33 +61,33 @@
 /* Standard margin */
 .box-full, .box-lrg, .box-sml, .box-half, .box-third  {
   margin-bottom: 1rem;
-  @include media-query3 {
+  @include mq-sm {
     margin-bottom: 3%;
   }
 }
 
 .marg-r {
-  @include media-query3 {
+  @include mq-sm {
     margin-right: 1.5%;
   }
 }
 
 .marg-l {
-  @include media-query3 {
+  @include mq-sm {
     margin-left: 1.5%;
   }
 }
 
 .box-half.marg-r {
   margin-right: 0;
-  @include media-query5 {
+  @include mq-lg {
     margin-right: 1.5%;
   }
 }
 
 .box-half.marg-l {
   margin-left: 0;
-  @include media-query5 {
+  @include mq-lg {
     margin-left: 1.5%;
   }
 }

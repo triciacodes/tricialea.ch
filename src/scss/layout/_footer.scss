@@ -20,7 +20,7 @@ footer li {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 1.2rem; 
-  @include media-query3 {
+  @include mq-sm {
     padding: 1.5rem; 
   }
   background-color: $color-primary2;
@@ -48,7 +48,7 @@ footer li {
     align-self: flex-end;
   }
   
-  @include media-query3 {
+  @include mq-sm {
     >div:nth-child(4) {
       min-width: 25%;
       -webkit-flex: 1 1 25%; 
@@ -63,7 +63,7 @@ footer li {
 
 .nav-links--footer {
   display: none;     /* hides second set of menu links on mobile */
-  @include media-query3 {
+  @include mq-sm {
       display: inline-block;     /* shows footer links larger screens */
   }
 }
@@ -71,7 +71,7 @@ footer li {
 .c-social--footer {
   align-self: flex-start;
   order: -1;
-  @include media-query3 {
+  @include mq-sm {
     order: initial;
     align-self: flex-end;
   }

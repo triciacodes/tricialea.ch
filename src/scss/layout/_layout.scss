@@ -21,7 +21,7 @@ body {
   line-height: 1.7;
   background-color: $color-background;
   border-top: 0.5rem solid $color-primary2;
-  @include media-query3 {
+  @include mq-sm {
     padding-top: 2rem;
     font-size: 1.125rem;
   }
@@ -34,7 +34,7 @@ body { min-height: 100%; min-width: 100%; display: table; }
 .footer { display: table-footer-group; }
 
 .page-index, .page-contact {
-  @include media-query4 {
+  @include mq-md {
     padding-top: 1.75rem;
   }
 }
@@ -44,7 +44,7 @@ body { min-height: 100%; min-width: 100%; display: table; }
 .c-main {
   margin: auto;
   width: 92%;
-  @include media-query4 {
+  @include mq-md {
     width: 80%;
   }
 }
