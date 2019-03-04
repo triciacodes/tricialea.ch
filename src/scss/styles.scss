@@ -7,20 +7,21 @@
 @import 'utilities/media-queries';
 @import 'utilities/variables';
 
+@import 'base';
+
 @import 'helpers/helpers';
 @import 'helpers/animation';
 
-@import 'layout/layout';
 @import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/about';
 @import 'layout/index';
 @import 'layout/projects';
 
 @import 'typography/typography';
 @import 'typography/links';
 
+@import 'components/header';
+@import 'components/footer';
+@import 'components/about';
 @import 'components/buttons';
 @import 'components/logo';
 @import 'components/navigation';

@@ -1,5 +1,5 @@
 <header class="c-header">
-  <div class="header  header--left">
+  <div class="header--left">
     <!-- <img src="img/patterns.png" width="400px" style="padding-right: 150px" alt="Geometric patterns"> -->
   </div>
   <div class="header  header--right">
