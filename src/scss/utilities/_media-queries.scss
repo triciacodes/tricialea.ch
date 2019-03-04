@@ -1,7 +1,3 @@
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-//    #MEDIA-QUERIES
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
 @mixin mq-xs {
   @media screen and (max-width: #{$xs}) {
     @content;

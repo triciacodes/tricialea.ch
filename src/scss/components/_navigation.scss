@@ -1,0 +1,19 @@
+.nav-links {
+  ul {
+    margin: 0;
+  }
+  li {
+    display: inline-block;
+    padding-right: 1rem;
+    padding-bottom: 0;
+    color: $color-neutral-medium;
+    font-family: $font-nav;
+    font-size: .875rem;
+    font-weight: $font-weight-medium;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    @include mq-sm {
+      padding-right: 2rem;
+    }
+  }
+}

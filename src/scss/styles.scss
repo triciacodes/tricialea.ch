@@ -8,20 +8,23 @@
 @import 'utilities/variables';
 
 @import 'helpers/helpers';
+@import 'helpers/animation';
 
 @import 'layout/layout';
 @import 'layout/grid';
 @import 'layout/navigation';
 @import 'layout/header';
 @import 'layout/footer';
+@import 'layout/about';
+@import 'layout/index';
+@import 'layout/projects';
 
 @import 'typography/typography';
 @import 'typography/links';
 
-@import 'components/components';
-
-@import 'pages/about';
-@import 'pages/index';
-@import 'pages/projects';
+@import 'components/buttons';
+@import 'components/logo';
+@import 'components/navigation';
+@import 'components/social-icons';
 
 @import 'testing';
