@@ -1,10 +1,10 @@
 <nav>
 
-  <div class="nav-links nav-links__main-menu js-fade-nav">
+  <div class="c-nav-links js-fade-nav">
     <ul>
-      <li><a href="/"><span class="branding branding--nav">Tricia</span></a></li>
-      <li><a href="/#page-projects">Projects</a></li>
-      <li><a href="/#page-about">About</a></li>
+      <li class="nav-links"><a href="/"><span class="branding branding--nav">Tricia</span></a></li>
+      <li class="nav-links"><a href="/#page-projects">Projects</a></li>
+      <li class="nav-links"><a href="/#page-about">About</a></li>
     </ul>
   </div>  
 
