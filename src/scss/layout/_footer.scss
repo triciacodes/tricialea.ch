@@ -1,30 +1,27 @@
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *\
-      #FOOTER
-\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
-footer ul {
+.footer ul {
   margin-left: 0;
   margin-bottom: 0;
 }
 
-footer li {
+.footer li {
   padding-bottom: 0;
   line-height: 1;
 }
 
 .c-footer {
+  background-color: $color-primary2;
+  padding: 1.2rem;
   width: 100%;
   position: relative;
   z-index: 99;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 1.2rem; 
   @include mq-sm {
     padding: 1.5rem; 
   }
-  background-color: $color-primary2;
 
+  // TODO: address nth-child in a better way, will cause probs if more divs added!!
   >div:nth-child(1) {
     flex-grow: 2;     /* navigation expands to fill space */
     min-width: 50%;
@@ -61,10 +58,10 @@ footer li {
 
 }
 
-.nav-links--footer {
+.c-nav-links--footer {
   display: none;     /* hides second set of menu links on mobile */
   @include mq-sm {
-      display: inline-block;     /* shows footer links larger screens */
+    display: inline-block;     /* shows footer links larger screens */
   }
 }
 
@@ -75,17 +72,10 @@ footer li {
     order: initial;
     align-self: flex-end;
   }
-}
-
-.social__list--footer {
-  line-height: 0;
-}
-
-.social__icon--footer {
-  display: inline-block;
-  //padding-right: 5px;
-}
-
-.logo--footer {
-  height: 1rem;
+  ul {
+    line-height: 0;
+    li {
+      display: inline-block;
+    }
+  }
 }

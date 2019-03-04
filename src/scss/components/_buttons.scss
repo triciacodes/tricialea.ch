@@ -1,0 +1,15 @@
+.button {
+  background-color: $color-primary2;
+  border-radius: 3px;
+  margin-right: 5px;
+  padding: 6px 10px;
+  width: 10em;
+  font-size: .9rem;
+  font-weight: $font-weight-medium;
+  text-transform: uppercase;
+  text-align: center;
+  @include mq-lg {
+    margin-bottom: .7em;
+    display: inline-block;
+  }
+}

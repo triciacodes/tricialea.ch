@@ -1,0 +1,49 @@
+// container nav links positioning
+.c-nav-links {
+  width: 92%;
+  margin: auto;
+
+  ul {
+    margin: 0;
+  }
+
+  @include mq-md {
+    position: fixed;
+    top: .9rem;
+    left: 1.2rem;
+    width: auto;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+  }
+}
+
+// container social icons in left nav bar
+.c-social--nav {
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+  }
+  display: none;     /* hides social links from nav bar small screens */
+  @include mq-md {
+    display: block;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.2rem;
+    z-index: 1;
+  }
+}
+
+.nav-links {
+  display: inline-block;
+  padding-right: 1rem;
+  padding-bottom: 0;
+  color: $color-neutral-medium;
+  font-family: $font-nav;
+  font-size: .875rem;
+  font-weight: $font-weight-medium;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  @include mq-sm {
+    padding-right: 2rem;
+  }
+}

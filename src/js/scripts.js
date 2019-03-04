@@ -6,7 +6,7 @@
 
 function fadeNav() {
   var navItems = Array(...document.querySelectorAll(".js-fade-nav"))
-  var footer = document.getElementById('c-footer')
+  var footer = document.querySelector('.js-footer')
 
   var scrollHeight = window.scrollY + window.innerHeight
   var topOfFooter = document.body.offsetHeight - footer.offsetHeight
