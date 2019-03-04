@@ -1,6 +1,6 @@
 <footer class="footer">
 
-  <div id="c-footer" class="c-footer">
+  <div class="c-footer js-footer">
     
     <div class="c-nav-links--footer">
       <ul>
