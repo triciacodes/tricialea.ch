@@ -1,4 +1,10 @@
-.social {
+.social__icon {
+  
+  padding-right: 15px;     /* larger tap targets on small screens */
+  @include mq-md {
+    padding-right: 10px;
+  }
+
   svg path {
     fill: $color-neutral-medium;
   }
@@ -7,12 +13,6 @@
     width: 30px;     /* larger icons on small screens */
     @include mq-md {
       width: 25px;
-    }
-  }
-  li {
-    padding-right: 15px;     /* larger tap targets on small screens */
-    @include mq-md {
-      padding-right: 10px;
     }
   }
 }
