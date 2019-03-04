@@ -1,7 +1,10 @@
 .nav-links {
+  margin-left: 0;
+
   ul {
     margin: 0;
   }
+
   li {
     display: inline-block;
     padding-right: 1rem;
@@ -15,5 +18,38 @@
     @include mq-sm {
       padding-right: 2rem;
     }
+  }
+
+}
+
+// nav links container positioning
+.nav-links__main-menu {
+  width: 92%;
+  margin: auto;
+  margin-bottom: 3rem;
+
+  @include mq-md {
+    position: fixed;
+    top: .9rem;
+    left: 1.2rem;
+    width: auto;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+  }
+}
+
+// social icons in left nav bar
+.c-social--nav {
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+  }
+  display: none;     /* hides social links from nav bar small screens */
+  @include mq-md {
+    display: block;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.2rem;
+    z-index: 1;
   }
 }
