@@ -21,27 +21,27 @@
   margin-bottom: 2em;
 }
 
-.header--left img {
-  width: 80%;
-  margin: auto;
-  @include mq-sm-md {
-    width: 100%;
-  }
-  @include mq-md {
-    width: 80%;
-  }
-}
-
 .header--right {
-  @include mq-sm {
+  @include mq-md {
     margin-left: 1.5%;
     width: 58.5%;
   }
 }
 
 .header--left {
-  @include mq-sm {
+  @include mq-md {
     margin-right: 1.5%;
     width: 38.5%;
   }
 }
+
+// .header--left img {
+//   width: 80%;
+//   margin: auto;
+//   @include mq-sm-md {
+//     width: 100%;
+//   }
+//   @include mq-md {
+//     width: 80%;
+//   }
+// }
