@@ -9,7 +9,7 @@
     <h3>My work</h3>
     <p>I'm happiest working somewhere in the middle of design, art, craft, and technology. I love digging into the details of code to build engaging and delightful experiences, both for the web and the physical world. My secret weapons are my enthusiasm for community building, and a well-crafted spreadsheet.</p>
     <h3>Drop me a line</h3>
-    <p>Would you like to chat about roles at your company, or freelance projects? Get in touch at <a href="mailto:hi@tricialea.ch">hi@tricialea.ch</a>.</p>
+    <p>Get in touch at <a href="mailto:hi@tricialea.ch">hi@tricialea.ch</a>.</p>
     <h3>Download my resume</h3>
     <p>You can find a copy <a target="_blank" href="/assets/tricialeach-resume-feb-2019.pdf">right here</a>.</p>
 
